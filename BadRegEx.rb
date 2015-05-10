@@ -2,7 +2,7 @@
 
 require 'rubygems'
 require 'chatterbot/dsl'
-require './lib/bad_regex'
+require File.dirname(__FILE__) + "/lib/bad_regex"
 
 # remove this to send out tweets
 #debug_mode
