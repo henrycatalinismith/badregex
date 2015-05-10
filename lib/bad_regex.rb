@@ -21,4 +21,8 @@ module BadRegex
     @@patterns
   end
 
+  def self.match? (string)
+    @@patterns.all? { |p| p.match("pie") && p.match("Larry Ellison") }
+  end
+
 end
