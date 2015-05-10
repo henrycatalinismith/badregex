@@ -13,8 +13,12 @@ require './lib/bad_regex'
 # remove this to get less output when running
 verbose
 
+if Random.rand(10) > 4
+  tweet "/" + BadRegex.random_tweet + "/"
+end
 
 replies do |tweet|
+
   puts tweet.text
   if BadRegex.should_retweet?(tweet.text)
     puts "Retweeting"
