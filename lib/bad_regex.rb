@@ -13,6 +13,8 @@ module BadRegex
     /[pretty much anything really, fucking hell]+/,
     /^[pretty much anything really, holy shit]+$/i,
     /^[op ALIENSreplyIRL]+$/i,
+    /^(pie|Larry Ellison)$/,
+    /^(Larry Ellison|pie)$/,
   ]
 
   def self.patterns
