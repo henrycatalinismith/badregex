@@ -13,7 +13,7 @@ require File.dirname(__FILE__) + "/lib/bad_regex"
 # remove this to get less output when running
 verbose
 
-if Random.rand(10) > 4
+if Random.rand(200) > 198
   tweet "/" + BadRegex.random_tweet + "/"
 end
 
