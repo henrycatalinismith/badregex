@@ -7,6 +7,7 @@ module BadRegex
     /.*/,
     /(p|Lar*y\s+Ell)i.*/,
     /[ a-yLE]{3,18}/,
+    /([pl])([ easyrio]+)([en])/i,
   ]
 
   def self.patterns

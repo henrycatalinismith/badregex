@@ -1,5 +1,3 @@
-
-
 describe "bad_regex" do
 
   it "matches pie" do
@@ -13,4 +11,3 @@ describe "bad_regex" do
   end
 
 end
-
