@@ -1,21 +1,11 @@
 describe BadRegex do
 
-  describe "match?" do
-    it "matches pie" do
-      expect(BadRegex.match?("pie")).to eq(true)
-    end
-
-    it "matches Larry Ellison" do
-      expect(BadRegex.match?("Larry Ellison")).to eq(true)
-    end
-  end
-
   describe "valid?" do
-    it "true for good regexes" do
+    it "returns true for good regexes" do
       expect(BadRegex.valid?(/.*/)).to eq(true)
     end
 
-    it "false for bad regexes" do
+    it "returns false for bad regexes" do
       expect(BadRegex.valid?(/^fish$/)).to eq(false)
     end
   end
@@ -27,11 +17,11 @@ describe BadRegex do
   end
 
   describe "should_retweet?" do
-    it "true for good ones" do
+    it "returns true for good tweets" do
       expect(BadRegex.should_retweet?("@BadRegex @SwiftOnSecurity /.*/")).to eq(true)
     end
 
-    it "false for good ones" do
+    it "returns false for bad tweets" do
       expect(BadRegex.should_retweet?("@BadRegex @SwiftOnSecurity /^fish$/")).to eq(false)
     end
   end
