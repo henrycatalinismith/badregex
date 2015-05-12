@@ -9,7 +9,7 @@ module BadRegex
   end
 
   def self.strip_usernames(string)
-    string.gsub(/@[^ ]+/, '').strip
+    string.gsub(/@[A-Za-z0-9_ ]+/, '').strip
   end
 
   def self.should_retweet?(tweet_body)
