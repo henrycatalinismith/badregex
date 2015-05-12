@@ -14,6 +14,7 @@ module BadRegex
 
   def self.should_retweet?(tweet_body)
     regex = self.strip_usernames(tweet_body).strip
+    regex = regex.gsub('&lt;', '<')
     if regex.split(//).first == "/" && regex.split(//).last == "/"
       regex = regex[1..-2]
     end
