@@ -29,6 +29,10 @@ describe BadRegex do
       expect(BadRegex.should_retweet?("@BadRegex @SwiftOnSecurity /.*/")).to eq(true)
     end
 
+    it "copes with Twitter mangling < signs" do
+      expect(BadRegex.should_retweet?("@BadRegEx [Lp]((?&lt;!L)ie|(?&lt;!p)arry)(((?&lt;=y)(\sEllison))|[^Ellison]*)")).to eq(true)
+    end
+
     it "returns false for bad tweets" do
       expect(BadRegex.should_retweet?("@BadRegex @SwiftOnSecurity /^fish$/")).to eq(false)
     end
