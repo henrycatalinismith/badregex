@@ -9,6 +9,10 @@ describe BadRegex do
       expect(BadRegex.valid?(/(?<!T)[aylor ]*(?!Swift)[ On Especially \@BadRegEx]+/i)).to eq(true)
     end
 
+    it "returns true for good regexes" do
+      expect(BadRegex.valid?(/[Lp]((?<!L)ie|(?<!p)arry)(((?<=y)(\sEllison))|[^Ellison]*)/)).to eq(true)
+    end
+
     it "returns false for bad regexes" do
       expect(BadRegex.valid?(/^fish$/)).to eq(false)
     end
