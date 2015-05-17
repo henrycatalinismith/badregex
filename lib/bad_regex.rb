@@ -22,9 +22,4 @@ module BadRegex
     self.valid?(regex)
   end
 
-  def self.random_tweet
-    characters = 'pieLarry Ellison'.split(//)
-    "^[" + characters.shuffle.join + "]+$"
-  end
-
 end
